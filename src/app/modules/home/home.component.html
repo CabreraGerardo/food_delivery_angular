@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <h1 class="mb-3">Comida cerca de mí</h1>
+
+    <div class="row text-center">
+        <app-category-circle class="col-2" *ngFor="let category of categories" [category]="category"></app-category-circle>
+    </div>
+
+    <div class="text-center row d-flex justify-content-center align-items-center">
+        <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/0c6de4f0b3884eb89b28a29ecbc10d59.svg" height="80"> &nbsp; &nbsp; &nbsp;
+        <h2>Hay mucho más que te encantará en la app.</h2> &nbsp; &nbsp; &nbsp;
+        <button class="btnMobileapp"><i class="fab fa-apple"></i>&nbsp; iPhone</button> &nbsp; &nbsp; &nbsp;
+        <button class="btnMobileapp"><i class="fab fa-android"></i>&nbsp; Android</button>
+    </div>
+
+    <h1 class="mt-5">Nuevo en Uber Eats</h1>
+
+    <div class="row">
+        <app-item-card class="col-4" *ngFor="let item of food" [item]="item"></app-item-card>
+    </div>
+
+    <h1 class="mt-5">Pizza</h1>
+
+    <div class="row">
+        <app-item-card class="col-4" *ngFor="let item of food" [item]="item"></app-item-card>
+    </div>
+</div>

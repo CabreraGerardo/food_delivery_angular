@@ -1,0 +1,13 @@
+<div *ngIf="item.promo" class="promo-banner">
+    {{item.promo}}
+</div>
+
+<div class="d-flex flex-column">
+    <div class="center-cropped" 
+        style="background-image: url('{{item.image}}');">
+        <img [src]="item.image" />
+    </div>
+    <b>{{item.name}}</b>
+    <p>{{item.description}}</p>
+</div>
+
