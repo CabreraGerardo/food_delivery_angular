@@ -2,7 +2,7 @@
     <h1 class="mb-3">Comida cerca de mí</h1>
 
     <div class="row text-center margin">
-        <app-category-circle class="col-2" *ngFor="let category of categories" [category]="category"></app-category-circle>
+        <app-category-circle class="col-2" *ngFor="let category of categories" [category]="category" routerLink="{{category.name}}"></app-category-circle>
     </div>
 
     <div class="text-center row d-flex justify-content-center align-items-center margin">
@@ -21,7 +21,7 @@
     <div class="margin" *ngFor="let category of categories">
         <div class="row d-flex align-items-end justify-content-between mx-1">
             <h1 class="mt-5">{{category.name}}</h1>
-            <a class="mb-3" routerLink="{{category.name}}">Ver más</a>
+            <a class="mb-3 text-dark" routerLink="{{category.name}}">Ver más</a>
         </div>        
 
         <div class="row">
