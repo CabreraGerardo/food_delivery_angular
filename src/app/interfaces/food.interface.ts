@@ -1,7 +1,10 @@
+import { ICategory } from './category.interface';
+
 export interface IFood{
     id: number,
     name: string,
-    description: string,
+    price: number,
     image?: string,
-    promo?: string
+    promo?: string,
+    category: ICategory
 }

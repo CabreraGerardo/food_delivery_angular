@@ -11,13 +11,15 @@ import { CategoryState } from './models/category.redux';
 import { CategoryCircleComponent } from './components/category-circle/category-circle.component';
 import { ItemCardComponent } from './components/item-card/item-card.component';
 import { FoodState } from './models/food.redux';
+import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CategoryCircleComponent,
-    ItemCardComponent
+    ItemCardComponent,
+    FilterByCategoryPipe
   ],
   imports: [
     BrowserModule,

@@ -15,12 +15,24 @@
     <h1 class="mt-5">Nuevo en Uber Eats</h1>
 
     <div class="row">
-        <app-item-card class="col-4" *ngFor="let item of food" [item]="item"></app-item-card>
+        <app-item-card class="col-4" *ngFor="let item of (food | slice:0:3)" [item]="item"></app-item-card>
     </div>
 
     <h1 class="mt-5">Pizza</h1>
 
     <div class="row">
-        <app-item-card class="col-4" *ngFor="let item of food" [item]="item"></app-item-card>
+        <app-item-card class="col-4" *ngFor="let item of (food | filterByCategory:'Pizza':food | slice:0:3)" [item]="item"></app-item-card>
+    </div>
+
+    <h1 class="mt-5">BBQ</h1>
+
+    <div class="row">
+        <app-item-card class="col-4" *ngFor="let item of (food | filterByCategory:'BBQ':food | slice:0:3)" [item]="item"></app-item-card>
+    </div>
+
+    <h1 class="mt-5">Alcohol</h1>
+
+    <div class="row">
+        <app-item-card class="col-4" *ngFor="let item of (food | filterByCategory:'Alcohol':food | slice:0:3)" [item]="item"></app-item-card>
     </div>
 </div>

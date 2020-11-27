@@ -21,7 +21,8 @@ export class LoadFood{
         food: {
             id: null,
             name: null,
-            description: null
+            price: null,
+            category: null
         }
     }
 })
