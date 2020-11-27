@@ -1,0 +1,9 @@
+<div class="row d-flex align-items-end justify-content-between mx-1">
+    <h1 class="mb-2">{{category.name}}</h1>   
+</div>
+
+<hr>
+
+<div class="row mt-5">
+    <app-item-card class="col-4" *ngFor="let item of (food | filterByCategory:category.name:food)" [item]="item"></app-item-card>
+</div>

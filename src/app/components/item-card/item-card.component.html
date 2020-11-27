@@ -2,7 +2,7 @@
     {{item.promo}}
 </div>
 
-<div class="d-flex flex-column">
+<div class="d-flex flex-column item" (click)="open(mymodal)">
     <div class="center-cropped" 
         style="background-image: url('{{item.image}}');">
         <img [src]="item.image" />
@@ -11,3 +11,15 @@
     <p>Costo: ${{item.price}} MXN</p>
 </div>
 
+<ng-template #mymodal let-modal>
+    <div class="modal-header">
+        <img class="img-fluid modal-title" [src]="item.image"/>
+    </div>
+    <div class="modal-body">
+        {{item.name}}
+        Costo: ${{item.price}} MXN
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+    </div>
+</ng-template>

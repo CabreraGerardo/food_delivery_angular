@@ -12,6 +12,8 @@ import { CategoryCircleComponent } from './components/category-circle/category-c
 import { ItemCardComponent } from './components/item-card/item-card.component';
 import { FoodState } from './models/food.redux';
 import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
+import { MenuComponent } from './components/menu/menu.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
     HomeComponent,
     CategoryCircleComponent,
     ItemCardComponent,
-    FilterByCategoryPipe
+    FilterByCategoryPipe,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { FilterByCategoryPipe } from './pipes/filter-by-category.pipe';
     NgxsModule.forRoot([CategoryState, FoodState], {
       developmentMode: true
     }),
-    NgxsReduxDevtoolsPluginModule.forRoot()
+    NgxsReduxDevtoolsPluginModule.forRoot(), 
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

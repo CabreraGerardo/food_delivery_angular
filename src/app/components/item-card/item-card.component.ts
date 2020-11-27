@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { IFood } from 'src/app/interfaces/food.interface';
 
 @Component({
@@ -9,9 +10,13 @@ import { IFood } from 'src/app/interfaces/food.interface';
 export class ItemCardComponent implements OnInit {
   @Input() item: IFood;
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
+  }
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result;
   }
 
 }
